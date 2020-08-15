@@ -8,7 +8,7 @@ Prueba de conocimientos técnicos para práctica profesional
 | -------------------------------------------- | ------- |
 | [Node](https://nodejs.org/en/)               | 12.18.1 |
 | [Nest](https://nestjs.com)                   | 7.4.1   |
-| [TypeScript](https://www.typescriptlang.org) | 3.9.5   |
+| [TypeScript](https://www.typescriptlang.org) | 3.7.4   |
 
 Una vez descargado o clonado el repositorio, y cumpliendo los pre-requisitos, solo es necesario ejecutar el comando `npm start`
 
@@ -102,4 +102,4 @@ Para acceder a los datos, es necesario acceder a la ruta `/tasks` mediante el m�
 
 Para añadir una tarea a la API, es necesario acceder a la ruta `/tasks` mediante el método `Post`, el cual requiere los datos mencionados anteriormente.
 
-Para asignar una tarea como resuelta, es necesario acceder a la ruta `/tasks/nombre de la tarea`, esto no requiere ningun dato, dado que busca la tarea y modifica su estado.
+Para asignar una tarea como resuelta, es necesario acceder a la ruta `/tasks/nombre de la tarea` mediante el método `Put`, esto no requiere ningun dato, dado que busca la tarea y modifica su estado.
