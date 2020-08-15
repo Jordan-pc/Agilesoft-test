@@ -51,7 +51,27 @@ export class TasksService {
 }
 ```
 
-El controlador se encarga de recibir las peticiones y enviar una respuesta al cliente mediante un mecanismo de routing y consumiendo el servicio mencionado anteriormente.
+Para añadir una tarea a la API, se requieren los siguientes datos:
+
+```js
+export class CreateTaskDto {
+  @IsNotEmpty()
+  @IsString()
+  readonly name: string;
+
+  @IsNotEmpty()
+  @IsBoolean()
+  readonly state: boolean;
+
+  @IsNotEmpty()
+  @IsString()
+  readonly description: string;
+}
+```
+
+Los datos mostrados anteriormente, son validados mediante decoradores, verificando que cumplan el tipo de dato solicitado, y que estos no estén vacíos.
+
+El controlador se encarga de recibir las peticiones y enviar una respuesta al cliente, consumiendo el servicio mencionado anteriormente.
 
 ```js
 @Controller('tasks')
@@ -77,3 +97,9 @@ export class TasksController {
   }
 }
 ```
+
+Para acceder a los datos, es necesario acceder a la ruta `/tasks` mediante el método `Get`
+
+Para añadir una tarea a la API, es necesario acceder a la ruta `/tasks` mediante el método `Post`, el cual requiere los datos mencionados anteriormente.
+
+Para asignar una tarea como resuelta, es necesario acceder a la ruta `/tasks/nombre de la tarea`, esto no requiere ningun dato, dado que busca la tarea y modifica su estado.
