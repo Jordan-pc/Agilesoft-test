@@ -98,6 +98,8 @@ export class TasksController {
 }
 ```
 
+## Rutas
+
 Para acceder a los datos, es necesario acceder a la ruta `/tasks` mediante el método `Get`
 
 Para añadir una tarea a la API, es necesario acceder a la ruta `/tasks` mediante el método `Post`, el cual requiere los datos mencionados anteriormente.
