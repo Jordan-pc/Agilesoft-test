@@ -31,6 +31,6 @@ export class TasksController {
   @Put(':name')
   resolveTask(@Res() res: Response, @Param('name') name: string): Response {
     const task = this.taskService.resolveTask(name);
-    return res.status(HttpStatus.OK).json(task);
+    return res.status(HttpStatus.OK).json({ message: 'task resolved', task });
   }
 }

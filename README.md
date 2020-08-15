@@ -1,10 +1,10 @@
 # Agilesoft
 
-Prueba de conocimientos tecnicos para practica profesional
+Prueba de conocimientos técnicos para práctica profesional
 
 ## Pre-requisitos :clipboard:
 
-| Requirement                                  | Version |
+| Requirimientos                               | Versión |
 | -------------------------------------------- | ------- |
 | [Node](https://nodejs.org/en/)               | 12.18.1 |
 | [Nest](https://nestjs.com)                   | 7.4.1   |
@@ -22,13 +22,13 @@ Se requiere desarrollar una API Rest para un sistema TODO List con las siguiente
 
 ## Solución
 
-Para solucionar este problema se implemetó un modulo de nest llamado tasks, el cual está dividido en servicios y controladores.
+Para solucionar este problema se implementó un módulo de nest llamado tasks, el cual está dividido en servicios y controladores.
 
-Dado que para la solucion no se requiere utilizar una base de datos, estos seran almacenados en memoria utilizando un array, el cual será parte del servicio.
+Dado que para la solución no se requiere utilizar una base de datos, estos serán almacenados en memoria utilizando un array, el cual será parte del servicio.
 
 El servicio es el responsable de almacenar y solicitar los datos y está diseñado para ser utilizado por el controlador.
 
-Dado que los datos que debe contener una tarea son nombre, estado y descripción, se asume que el nombre de las mismas debe ser unico para cada tarea.
+Dado que los datos que debe contener una tarea son nombre, estado y descripción, se asume que el nombre de las mismas debe ser único para cada tarea.
 
 ```js
 @Injectable()
